@@ -2,42 +2,27 @@ package com.yupi.lananoj.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.lananoj.model.dto.question.QuestionQueryRequest;
 import com.yupi.lananoj.model.entity.Question;
-import com.yupi.lananoj.model.entity.Question;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.lananoj.model.vo.QuestionVO;
 
 import javax.servlet.http.HttpServletRequest;
 
 /**
-* @author 王
-* @description 针对表【question(题目)】的数据库操作Service
-* @createDate 2024-06-02 14:45:16
-*/
+ * @author
+ * @description 针对表【question(题目)】的数据库操作Service
+ * @createDate 2023-08-07 20:58:00
+ */
 public interface QuestionService extends IService<Question> {
+
+
     /**
      * 校验
      *
      * @param question
      * @param add
      */
-    void validQuestion(Question question, boolean add);
-
-    /*
-    * 校验题目是否合法
-    *
-    *
-    * */
-    void validQuestion(Question question, boolean add);
-
-    /*
-    * 校验题目是否合法
-    *
-    *
-    * */
-    void validQuestion(Question question, boolean add);
-
     void validQuestion(Question question, boolean add);
 
     /**
@@ -47,7 +32,6 @@ public interface QuestionService extends IService<Question> {
      * @return
      */
     QueryWrapper<Question> getQueryWrapper(QuestionQueryRequest questionQueryRequest);
-    
 
     /**
      * 获取题目封装
@@ -66,4 +50,5 @@ public interface QuestionService extends IService<Question> {
      * @return
      */
     Page<QuestionVO> getQuestionVOPage(Page<Question> questionPage, HttpServletRequest request);
+
 }
