@@ -1,10 +1,10 @@
 package com.yupi.lananoj.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 题目提交
@@ -16,7 +16,7 @@ public class QuestionSubmit implements Serializable {
     /**
      * id
      */
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
     /**
@@ -30,12 +30,12 @@ public class QuestionSubmit implements Serializable {
     private String code;
 
     /**
-     * 判题信息(json对象)
+     * 判题信息（json 对象）
      */
     private String judgeInfo;
 
     /**
-     * 判题状态(0 -待判题 1- 判题中 2 - 成功 3 - 失败)
+     * 判题状态（0 - 待判题、1 - 判题中、2 - 成功、3 - 失败）
      */
     private Integer statu;
 
@@ -57,9 +57,15 @@ public class QuestionSubmit implements Serializable {
     /**
      * 更新时间
      */
-    @TableLogic
     private Date updateTime;
+
+    /**
+     * 是否删除
+     */
+    @TableLogic
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
+
 }

@@ -37,7 +37,7 @@ public class Question implements Serializable {
     /**
      * 题目答案
      */
-    private String answer;
+    private String answeer;
 
     /**
      * 题目提交数
@@ -47,7 +47,7 @@ public class Question implements Serializable {
     /**
      * 题目通过数
      */
-    private Integer acceptedNum;
+    private Integer accepteNum;
 
     /**
      * 判题用例（json 数组）

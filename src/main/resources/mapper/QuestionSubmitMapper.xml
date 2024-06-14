@@ -5,20 +5,23 @@
 <mapper namespace="com.yupi.lananoj.mapper.QuestionSubmitMapper">
 
     <resultMap id="BaseResultMap" type="com.yupi.lananoj.model.entity.QuestionSubmit">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="language" column="language" jdbcType="VARCHAR"/>
-            <result property="code" column="code" jdbcType="VARCHAR"/>
-            <result property="judgeInfo" column="judgeInfo" jdbcType="VARCHAR"/>
-            <result property="statu" column="statu" jdbcType="INTEGER"/>
-            <result property="questionId" column="questionId" jdbcType="BIGINT"/>
-            <result property="userId" column="userId" jdbcType="BIGINT"/>
-            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
-            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="language" column="language" jdbcType="VARCHAR"/>
+        <result property="code" column="code" jdbcType="VARCHAR"/>
+        <result property="judgeInfo" column="judgeInfo" jdbcType="VARCHAR"/>
+        <result property="statu" column="statu" jdbcType="INTEGER"/>
+        <result property="questionId" column="questionId" jdbcType="BIGINT"/>
+        <result property="userId" column="userId" jdbcType="BIGINT"/>
+        <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,language,code,
-        judgeInfo,statu,questionId,
-        userId,createTime,updateTime
+        judgeInfo,status,questionId,
+        userId,createTime,updateTime,
+        isDelete
     </sql>
+
 </mapper>

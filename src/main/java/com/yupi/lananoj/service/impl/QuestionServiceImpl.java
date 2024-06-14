@@ -51,7 +51,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
         String title = question.getTitle();
         String content = question.getContent();
         String tags = question.getTags();
-        String answer = question.getAnswer();
+        String answer = question.getAnsweer();
         String judgeCase = question.getJudgeCase();
         String judgeConfig = question.getJudgeConfig();
         // 创建时，参数不能为空
